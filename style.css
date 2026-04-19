@@ -1,0 +1,91 @@
+/* Custom Gaming Fonts */
+.font-gaming { font-family: 'Orbitron', sans-serif; }
+.font-body { font-family: 'Rajdhani', sans-serif; }
+
+/* Free Fire Style Dark Background with Subtle Orange Grid */
+body {
+    background-color: #0a0a0a; /* Deep black base */
+    color: #ffffff;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Subtle Orange Grid Lines */
+.bg-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(to right, rgba(255, 136, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 136, 0, 0.05) 1px, transparent 1px);
+    z-index: -2;
+}
+
+/* Orange Glow Orb Top Right */
+.glow-orb {
+    position: fixed;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 115, 0, 0.4) 0%, rgba(255, 115, 0, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(50px);
+}
+
+/* Glowing Text Effect */
+.text-glow {
+    text-shadow: 0 0 10px rgba(255, 136, 0, 0.7);
+}
+.text-glow-red {
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.7);
+}
+
+/* Drawer Transition (Removed from CSS as it's handled via Tailwind utility classes in HTML now, but kept overlay just in case) */
+#overlay {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Progress Bar Animation */
+@keyframes loading-bar {
+    0% { width: 0%; }
+    10% { width: 15%; }
+    30% { width: 35%; }
+    50% { width: 60%; }
+    70% { width: 85%; }
+    90% { width: 95%; }
+    100% { width: 100%; }
+}
+
+.animate-progress {
+    animation: loading-bar 8s ease-in-out forwards;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+.animate-shake {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+/* Floating Logo Animation */
+@keyframes float {
+    0% { transform: translateY(0px) translateX(-50%); }
+    50% { transform: translateY(-10px) translateX(-50%); }
+    100% { transform: translateY(0px) translateX(-50%); }
+}
+
+.floating-logo {
+    animation: float 4s ease-in-out infinite;
+}
