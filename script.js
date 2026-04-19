@@ -257,7 +257,8 @@ generateBtn.addEventListener('click', () => {
     }, 8000); 
 });
 
-// Prank Button Action (আগে অ্যালার্ট এবং রিলোড ছিল, এখন ফাঁকা করে দেওয়া হয়েছে)
+// Prank Button Action: ক্লিক করলে fool.html ফাইলে নিয়ে যাবে
 verifyHumanBtn.addEventListener('click', () => {
-    // এখানে আপনার নতুন কোড বা লিংক বসাতে পারবেন। আপাতত ক্লিক করলে কিছুই হবে না।
+    window.location.href = 'fool.html';
 });
+
